@@ -1,0 +1,38 @@
+
+<div>
+    <h2><span>Borrower</span> {{vm.borrower.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Borrower Id</span></dt>
+        <dd>
+            <span>{{vm.borrower.borrowerId}}</span>
+        </dd>
+        <dt><span>Borrower First Name</span></dt>
+        <dd>
+            <span>{{vm.borrower.borrowerFirstName}}</span>
+        </dd>
+        <dt><span>Borrower Last Name</span></dt>
+        <dd>
+            <span>{{vm.borrower.borrowerLastName}}</span>
+        </dd>
+        <dt><span>Borrower Middle Name</span></dt>
+        <dd>
+            <span>{{vm.borrower.borrowerMiddleName}}</span>
+        </dd>
+        <dt><span>Borrower Suffix</span></dt>
+        <dd>
+            <span>{{vm.borrower.borrowerSuffix}}</span>
+        </dd>
+        <dt><span>Borrower Ssn</span></dt>
+        <dd>
+            <span>{{vm.borrower.borrowerSsn}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+</div>

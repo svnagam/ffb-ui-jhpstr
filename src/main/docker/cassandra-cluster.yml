@@ -1,0 +1,23 @@
+version: '2'
+services:
+    ffbui-cassandra:
+        container_name: ffbui-cassandra
+        build:
+            context: .
+            dockerfile: cassandra/Cassandra-Cluster.Dockerfile
+        environment:
+            - CASSANDRA_CONTACT_POINT=ffbui-cassandra
+        # volumes:
+        #     - ~/volumes/jhipster/ffbUi/cassandra/:/var/lib/cassandra/data
+        ports:
+            - 7000:7000
+            - 7001:7001
+            - 7199:7199
+            - 9042:9042
+            - 9160:9160
+    ffbui-cassandra-node:
+        image: cassandra:2.2.5
+        links:
+            - ffbui-cassandra:seed
+        environment:
+            - CASSANDRA_SEEDS=seed
